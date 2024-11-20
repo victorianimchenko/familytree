@@ -2,7 +2,8 @@ from person import Person, FamilyMember
 
 
 def main():
-    print('h')
+  
+    print("Welcome to the Green Witch Hall!")
     # name = Person('Baba Calaba', 1990, 1991)
     # print(name)
     # x = FamilyMamber('Baba Calaba', 1990).print_member()
@@ -15,6 +16,8 @@ def main():
 
     siblings_ids = FamilyMember(person).find_siblings(data)
     siblings_name = FamilyMember(person).find_sibling_names(siblings_ids)
+
+    
 
 
 if __name__ == "__main__":
