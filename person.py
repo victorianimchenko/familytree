@@ -104,6 +104,16 @@ class FamilyMember(Person):
         spouses_name = spouses_data.get('name')
         list_spouses_name.append(spouses_name)
       return list_spouses_name
+    
+    def filtered_alive_member(self, list_names):
+      list = []
+      for name in list_names:
+         data = self.find_person(name)
+         death_date = data.get("death_date")
+         if death_date is None:
+            list.append(name)
+      return list
+                   
 
           
 
