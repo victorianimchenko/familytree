@@ -1,13 +1,15 @@
 from person import Person, FamilyMember
 
-def display_parents_name(person_info, name):
+def get_parents_name(person_info, name):
     list_ids = FamilyMember(name).find_parents_ids(person_info)
     names_list = FamilyMember(name).find_parents_name(list_ids)
-
-    for item in names_list:
-         print(item)
-
     return names_list
+
+def get_children_name(person_info, name):
+    list_ids = FamilyMember(name).find_children(person_info)
+    names_list = FamilyMember(name).find_children_name(list_ids)
+    return names_list
+
 
 def main():
   
@@ -17,7 +19,7 @@ def main():
     # x = FamilyMamber('Baba Calaba', 1990).print_member()
 
     # person = input('Enter individual name to show siblings: ')
-    name = 'Cornelia Emmersohn'
+    name = 'Suki Gandi'
     # age = input('Enter individual name to show siblings: ')
     # Cornelia Emmersohn
 
@@ -33,14 +35,30 @@ def main():
 
 # find parents
     print(f"{name}'s Parents:")
-    names_list = display_parents_name(data, name)
+    parents_list = get_parents_name(data, name)
+    if not parents_list:
+      print('Not found')
+    else:
+        for item in parents_list:
+         print(item)
 
 
-# find grandparents
-    print(f"{name}'s grandparents:")
-    for parent_name in names_list:
-        parent_info = Person(name).find_person(parent_name)
-        display_parents_name(parent_info, name)
+# find grandchildren
+    print(f"{name}'s grandchildren:")
+           
+    children = get_children_name(data, name)
+    granchildren = None
+    for child in children:
+        child_info = Person(name).find_person(child)
+        print('child info', child_info)
+        granchildren = get_children_name(child_info, child)
+
+    if not granchildren:
+      print('Not found')
+    else:
+        for item in granchildren:
+         print(item)
+        
         
   
 

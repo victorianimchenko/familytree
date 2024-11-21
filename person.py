@@ -62,6 +62,14 @@ class FamilyMember(Person):
     
     def find_children(self, person):
        return person.get('children')
+    
+    def find_children_name(self, children_ids):
+       name_list = []
+       for id in children_ids:
+          children_data = self.find_person_by_id(id)
+          children_name = children_data.get('name')
+          name_list.append(children_name)
+       return name_list
        
     def find_siblings(self, person):
        siblings = set()
