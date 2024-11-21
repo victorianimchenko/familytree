@@ -1,7 +1,7 @@
 family_tree = {
     "1": {
         "name": "Cornelia Emmersohn",
-        "birth_date": 1990,
+        "birth_date": "1990-03-12",
         "death_date": None,
         "parents": ["2", "3"],  # Посилання на унікальні ID батьків
         "spouses": ["16"],  # Посилання на унікальний ID партнера
@@ -9,7 +9,7 @@ family_tree = {
     },
     "2": {
         "name": "Suki Gandi",
-        "birth_date": 1967,
+        "birth_date": "1967-01-19",
         "death_date": None,
         "parents": ["6", "7"],
         "spouses": ["3"],
@@ -17,15 +17,15 @@ family_tree = {
     },
     "3": {
         "name": "Andrew Gandi",
-        "birth_date": 1965,
-        "death_date": 2022,
+        "birth_date": "1965-10-11",
+        "death_date": "2022-06-22",
         "parents": ["8", "9"],
         "spouses": ["2"],
         "children": ["1"]
     },
     "4": {
         "name": "Fiona Emmersohn",
-        "birth_date": 2010,
+        "birth_date": "2010-06-10",
         "death_date": None,
         "parents": ["1", "16"],
         "spouses": [],
@@ -33,7 +33,7 @@ family_tree = {
     },
     "5": {
         "name": "Greta Emmersohn",
-        "birth_date": 2012,
+        "birth_date": "2012-09-15",
         "death_date": None,
         "parents": ["1", "16"],
         "spouses": [],
@@ -41,7 +41,7 @@ family_tree = {
     },
     "6": {
         "name": "John Twink",
-        "birth_date": 1944,
+        "birth_date": "1944-05-10",
         "death_date": None,
         "parents": [],
         "spouses": ["7"],
@@ -49,15 +49,15 @@ family_tree = {
     },
     "7": {
         "name": "Fan Twink",
-        "birth_date": 1943,
-        "death_date": 2012,
+        "birth_date": "1943-05-10",
+        "death_date": "2012-12-31",
         "parents": [],
         "spouses": ["6"],
         "children": ["2", "10"]
     },
     "8": {
         "name": "David Gandi",
-        "birth_date": 1943,
+        "birth_date": "1943-07-30",
         "death_date": None,
         "parents": [],
         "spouses": ["9"],
@@ -65,7 +65,7 @@ family_tree = {
     },
     "9": {
         "name": "Amrita Gandi",
-        "birth_date": 1945,
+        "birth_date": "1945-03-06",
         "death_date": None,
         "parents": [],
         "spouses": ["8"],
@@ -73,7 +73,7 @@ family_tree = {
     },
     "10": {
         "name": "Daren Twink",
-        "birth_date": 1965,
+        "birth_date": "1965-11-29",
         "death_date": None,
         "parents": ["6", "7"],
         "spouses": ["11"],
@@ -81,7 +81,7 @@ family_tree = {
     },
     "11": {
         "name": "Brie Twink",
-        "birth_date": 1969,
+        "birth_date": "1969-06-10",
         "death_date": None,
         "parents": [],
         "spouses": ["10"],
@@ -89,7 +89,7 @@ family_tree = {
     },
     "12": {
         "name": "Lin Twink",
-        "birth_date": 1993,
+        "birth_date": "1993-11-29",
         "death_date": None,
         "parents": ["10", "11"],
         "spouses": [],
@@ -97,7 +97,7 @@ family_tree = {
     },
     "13": {
         "name": "Rebeka Zoolan",
-        "birth_date": 1970,
+        "birth_date": "1970-09-15",
         "death_date": None,
         "parents": ["8", "9"],
         "spouses": ["14"],
@@ -105,7 +105,7 @@ family_tree = {
     },
     "14": {
         "name": "Colder Zoolan",
-        "birth_date": 1965,
+        "birth_date": "1965-05-25",
         "death_date": None,
         "parents": [],
         "spouses": ["13"],
@@ -113,7 +113,7 @@ family_tree = {
     },
     "15": {
         "name": "Elida Zoolan",
-        "birth_date": 1999,
+        "birth_date": "1999-07-30",
         "death_date": None,
         "parents": ["13", "14"],
         "spouses": [],
@@ -121,7 +121,7 @@ family_tree = {
     },
     "16": {
         "name": "Otto Emmersohn",
-        "birth_date": 1992,
+        "birth_date": "1992-05-25",
         "death_date": None,
         "parents": ["17", "18"],
         "spouses": ["1"],
@@ -129,7 +129,7 @@ family_tree = {
     },
     "17": {
         "name": "Gustav Emmersohn",
-        "birth_date": 1965,
+        "birth_date": "1965-10-08",
         "death_date": None,
         "parents": ["21", "22"],
         "spouses": ["18"],
@@ -137,23 +137,23 @@ family_tree = {
     },
     "18": {
         "name": "Magdalena Emmersohn",
-        "birth_date": 1964,
-        "death_date": 2021,
+        "birth_date": "1964-08-22",
+        "death_date": "2021-09-21",
         "parents": ["19", "20"],
         "spouses": ["17"],
         "children": ["16"]
     },
     "19": {
         "name": "Leon Veber",
-        "birth_date": 1940,
-        "death_date": 2003,
+        "birth_date": "1940-12-12",
+        "death_date": "2003-02-08",
         "parents": [],
         "spouses": ["20"],
         "children": ["18"]
     },
     "20": {
         "name": "Enola Veber",
-        "birth_date": 1947,
+        "birth_date": "1947-01-01",
         "death_date": None,
         "parents": [],
         "spouses": ["19"],
@@ -161,15 +161,15 @@ family_tree = {
     },
     "21": {
         "name": "Kasia Emmersohn",
-        "birth_date": 1941,
-        "death_date": 2006,
+        "birth_date": "1941-09-06",
+        "death_date": "2006-04-13",
         "parents": [],
         "spouses": ["22"],
         "children": ["17"]
     },
     "22": {
         "name": "William Emmersohn",
-        "birth_date": 1946,
+        "birth_date": "1946-09-11",
         "death_date": None,
         "parents": [],
         "spouses": ["21", "23", "24"],
@@ -177,7 +177,7 @@ family_tree = {
     },
     "23": {
         "name": "Stella Emmersohn",
-        "birth_date": 1955,
+        "birth_date": "1955-11-19",
         "death_date": None,
         "parents": [],
         "spouses": ["22"],
@@ -185,7 +185,7 @@ family_tree = {
     },
     "24": {
         "name": "Tais Emmersohn",
-        "birth_date": 1949,
+        "birth_date": "1949-02-07",
         "death_date": None,
         "parents": [],
         "spouses": ["22"],
@@ -193,15 +193,15 @@ family_tree = {
     },
     "25": {
         "name": "Lidia Emmersohn",
-        "birth_date": 1975,
-        "death_date": 2000,
+        "birth_date": "1975-09-09",
+        "death_date": "2000-10-13",
         "parents": ["22", "23"],
         "spouses": [],
         "children": []
     },
     "26": {
         "name": "Adam Emmersohn",
-        "birth_date": 1968,
+        "birth_date": "1968-05-08",
         "death_date": None,
         "parents": ["22","24"],
         "spouses": ["27"],
@@ -209,7 +209,7 @@ family_tree = {
     },
     "27": {
         "name": "Hekata Emmersohn",
-        "birth_date": 1970,
+        "birth_date": "1970-01-19",
         "death_date": None,
         "parents": [],
         "spouses": ["26"],
@@ -217,7 +217,7 @@ family_tree = {
     },
     "28": {
         "name": "John Emmersohn",
-        "birth_date": 1998,
+        "birth_date": "1998-04-17",
         "death_date": None,
         "parents": ["26", "27"],
         "spouses": [],
