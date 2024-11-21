@@ -1,10 +1,10 @@
-family_cornelia = {
+family_tree = {
     "1": {
         "name": "Cornelia Emmersohn",
         "birth_year": 1990,
         "death_year": None,
-        "parents": ["3", "4"],  # Посилання на унікальні ID батьків
-        "spouses": [""],  # Посилання на унікальний ID партнера
+        "parents": ["2", "3"],  # Посилання на унікальні ID батьків
+        "spouses": ["16"],  # Посилання на унікальний ID партнера
         "children": ["4", "5"],
     },
     "2": {

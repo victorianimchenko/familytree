@@ -1,4 +1,4 @@
-from dictionary1 import family_tree_data
+from dictionaries import family_tree
 
 class Person:
     def __init__(self, name, birth_year=None, death_year=None):
@@ -17,25 +17,25 @@ class Person:
         self.parents = []  # Список ID батьків
         self.spouses = []  # Список ID партнерів
         self.children = []  # Список ID дітей
-        self.members = family_tree_data
+        self.members = family_tree
 
     def find_id_by_name(self, name):
-        for person_id, details in family_tree_data.items():
+        for person_id, details in family_tree.items():
           if details.get("name") == name:
             return person_id
           else:
               return None
           
     def find_person_by_id(self, person_id):
-        print(person_id, 'ID')
-        for id, details in family_tree_data.items():
+
+        for id, details in family_tree.items():
 
            if id == person_id:
               return {**details}
     
     
     def find_person(self, name):
-        for person_id, details in family_tree_data.items():
+        for person_id, details in family_tree.items():
           if details.get("name") == name:
             return {'id': person_id, **details}
           else:
@@ -50,6 +50,15 @@ class FamilyMember(Person):
 
     def find_parents_ids(self, person):
         return person.get('parents')
+    
+    def find_parents_name(self, parents_ids):
+       name_list = []
+       for id in parents_ids:
+          parent_data = self.find_person_by_id(id)
+          parent_name = parent_data.get('name')
+          name_list.append(parent_name)
+       return name_list
+          
     
     def find_children(self, person):
        return person.get('children')
@@ -73,8 +82,7 @@ class FamilyMember(Person):
           print(self.find_person_by_id(id))
 
 
-
-          
+       
         
     
     def print_member(self):
