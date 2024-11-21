@@ -1,5 +1,13 @@
 from person import Person, FamilyMember
 
+def display_parents_name(person_info, name):
+    list_ids = FamilyMember(name).find_parents_ids(person_info)
+    names_list = FamilyMember(name).find_parents_name(list_ids)
+
+    for item in names_list:
+         print(item)
+
+    return names_list
 
 def main():
   
@@ -24,12 +32,17 @@ def main():
     siblings_name = FamilyMember(name).find_sibling_names(siblings_ids)
 
 # find parents
-    parents_ids = FamilyMember(name).find_parents_ids(data)
-    names_list = FamilyMember(name).find_parents_name(parents_ids)
-
     print(f"{name}'s Parents:")
-    for name in names_list:
-        print(name)
+    names_list = display_parents_name(data, name)
+
+
+# find grandparents
+    print(f"{name}'s grandparents:")
+    for parent_name in names_list:
+        parent_info = Person(name).find_person(parent_name)
+        display_parents_name(parent_info, name)
+        
+  
 
 
 

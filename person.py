@@ -36,10 +36,10 @@ class Person:
     
     def find_person(self, name):
         for person_id, details in family_tree.items():
+
           if details.get("name") == name:
-            return {'id': person_id, **details}
-          else:
-              return f'Name {name} not found'
+              return {'id': person_id, **details}
+          
     
     def __str__(self):
         return f"{self.name} (b. {self.birth_year}" + (f", d. {self.death_year}" if self.death_year else "") + ")"
