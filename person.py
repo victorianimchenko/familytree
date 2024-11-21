@@ -86,8 +86,26 @@ class FamilyMember(Person):
        return siblings
     
     def find_sibling_names(self, sibling_ids):
+       list_names = []
        for id in sibling_ids:
-          print(self.find_person_by_id(id))
+         sibling_data = self.find_person_by_id(id)
+         sibling_name = sibling_data.get('name')
+         list_names.append(sibling_name)
+       return list_names
+    
+
+    def find_spouses_ids(self, person):
+       return person.get('spouses')
+   
+    def find_spouses_name(self, ids):
+      list_spouses_name = []
+      for id in ids:
+        spouses_data = self.find_person_by_id(id)
+        spouses_name = spouses_data.get('name')
+        list_spouses_name.append(spouses_name)
+      return list_spouses_name
+
+          
 
 
        
