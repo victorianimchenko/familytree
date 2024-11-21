@@ -11,6 +11,44 @@ def get_children_name(person_info, name):
     return names_list
 
 
+def get_siblings(sibling_info, name):
+   siblings_ids = FamilyMember(name).find_siblings(sibling_info)
+   siblings_name = FamilyMember(name).find_sibling_names(siblings_ids)
+   return siblings_name
+
+def get_spouses(person_info, name):
+    spouses_ids = FamilyMember(name).find_spouses_ids(person_info)
+    spouses_name = FamilyMember(name).find_spouses_name(spouses_ids)
+    return spouses_name
+
+
+def print_family_names(name, list_names, type_member):
+   print(f"{name} has {type_member}:")
+   if not list_names:
+      print('Not found')
+   else:
+      for item in list_names:
+         print(item)
+
+
+def immediate_family(person, name):
+   list_parents = get_parents_name(person, name)
+   print_family_names(name, list_parents, "parents")
+
+   list_children = get_children_name(person, name)
+   print_family_names(name, list_children, "children")
+         
+         
+   list_siblings = get_siblings(person, name)
+   print_family_names(name, list_siblings, "siblings")
+   
+   list_spouses = get_spouses(person, name)
+   print_family_names(name, list_spouses, "spouses")
+ 
+  
+
+
+
 def main():
   
     print("Welcome to the Green Witch Hall!")
@@ -30,36 +68,27 @@ def main():
 
 
 # find siblings
-    siblings_ids = FamilyMember(name).find_siblings(data)
-    siblings_name = FamilyMember(name).find_sibling_names(siblings_ids)
+    sibling_list = get_siblings(data, name)
+    print_family_names(name, sibling_list, 'sibling')
 
 # find parents
-    print(f"{name}'s Parents:")
+    
     parents_list = get_parents_name(data, name)
-    if not parents_list:
-      print('Not found')
-    else:
-        for item in parents_list:
-         print(item)
+    print_family_names(name, parents_list, 'parents')
 
 
-# find grandchildren
-    print(f"{name}'s grandchildren:")
-           
+# find grandchildren    
     children = get_children_name(data, name)
     granchildren = None
+    
     for child in children:
         child_info = Person(name).find_person(child)
-        print('child info', child_info)
         granchildren = get_children_name(child_info, child)
 
-    if not granchildren:
-      print('Not found')
-    else:
-        for item in granchildren:
-         print(item)
+    print_family_names(name, granchildren, 'grandchildren')
         
-        
+# immediate family (parents, children, spouse, siblings)
+    immediate_family(data, name)
   
 
 
